@@ -16,99 +16,99 @@ id = generate_id("Prajwal",22,"Mysore")
 
 print id
 
-# class Animal
+class Animal
 
-#     attr_accessor :name
+    attr_accessor :name
 
-#     def initialize(name)
-#         @name = name
-#     end
+    def initialize(name)
+        @name = name
+    end
 
-#     def animal_name()
-#         puts "I am #{name}"
-#     end
+    def animal_name()
+        puts "I am #{name}"
+    end
 
-# end
+end
 
-# obj = Animal.new("Lion")
+obj = Animal.new("Lion")
 
-# puts obj.animal_name
+puts obj.animal_name
 
-# #Conditional Statements
-# def if_demo(number)
-#     if number==1
-#         puts "Yah! your NO: #{number}"
-#     else
-#         puts "sry try again"
-#     end
-# end
+#Conditional Statements
+def if_demo(number)
+    if number==1
+        puts "Yah! your NO: #{number}"
+    else
+        puts "sry try again"
+    end
+end
 
-# def unless_demo(number)
-#     unless number==1
-#         puts "Yah! your NO: #{number}"
-#     else
-#         puts "Yeah ! Your Crazy"
-#     end
-# end
+def unless_demo(number)
+    unless number==1
+        puts "Yah! your NO: #{number}"
+    else
+        puts "Yeah ! Your Crazy"
+    end
+end
 
-# puts unless_demo(1)
+puts unless_demo(1)
 
-# print if_demo(1)
+print if_demo(1)
 
-# def if_if_elsif_else_unless_demo(number)
-#     if (number==1)
-#         if (number==1)
-#             puts "Yah! your NO: #{number}"
-#         end
-#     elsif(number==2)
-#         puts "Yah! your NO: #{number}"
-#     end
-#     if(number==3)
-#         puts "Yah! your NO: #{number}" 
-#     end
-#     unless(number==4)
-#         puts "Yah! your NO: #{number}"        
-#     else
-#         puts "Yeah ! Your Crazy"  
-#     end
-# end                   
+def if_if_elsif_else_unless_demo(number)
+    if (number==1)
+        if (number==1)
+            puts "Yah! your NO: #{number}"
+        end
+    elsif(number==2)
+        puts "Yah! your NO: #{number}"
+    end
+    if(number==3)
+        puts "Yah! your NO: #{number}" 
+    end
+    unless(number==4)
+        puts "Yah! your NO: #{number}"        
+    else
+        puts "Yeah ! Your Crazy"  
+    end
+end                   
 
-# print if_if_elsif_else_unless_demo(4)
+print if_if_elsif_else_unless_demo(4)
 
-# #switch Cases
+#switch Cases
 
-# print "Enter Your age : "
+print "Enter Your age : "
 
-# age = gets.chomp.to_i
+age = gets.chomp.to_i
 
-# case age
-# when 0..2
-#     puts "Your a Baby"
+case age
+when 0..2
+    puts "Your a Baby"
     
-# when 2..8
-#     puts "your a Child"
+when 2..8
+    puts "your a Child"
     
-# when 8..15
-#     puts "your juniour"
+when 8..15
+    puts "your juniour"
     
-# when 15..18
-#     puts "your a Teenage"
+when 15..18
+    puts "your a Teenage"
     
-# else
-#     puts "Your  an adult"
+else
+    puts "Your  an adult"
     
-# end
+end
 
-# # Block and Methods
+# Block and Methods
 
-# def print_method
-#     puts "Dude I'm Method"
-#     yield
-#     puts "Dude Again I'm Method"    
-# end
+def print_method
+    puts "Dude I'm Method"
+    yield
+    puts "Dude Again I'm Method"    
+end
 
-# print_method{
-#     puts "Dude I'm Block"
-# }
+print_method{
+    puts "Dude I'm Block"
+}
 
-# print_method()
+print_method()
