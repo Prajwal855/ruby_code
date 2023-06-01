@@ -9,27 +9,28 @@ def merge_sort(arr)
     return arr
   end
   mid = arr.length/2
-  left_arr = Array[..mid-1]
-  right_arr = Array[mid..-1]
+  left_arr = arr[..mid-1]
+  right_arr = arr[mid..-1]
 
   left_array = merge_sort(left_arr)
   right_array = merge_sort(right_arr)
 
-  sorted_arr = Array[]
+  sorted_array = []
+  left_idx = right_idx = 0
 
-  until left_array.empty?|| right_array.empty?
-    if left_array.first < right_array.first
-      sorted_arr<< left_array.shift
+  while left_idx < left_array.length && right_idx < right_array.length
+    if left_array[left_idx] < right_array[right_idx]
+      sorted_array.append(left_array[left_idx])
+      left_idx += 1
     else
-      sorted_arr<< right_array.shift
+      sorted_array.append(right_array[right_idx])
+      right_idx +=1
     end
   end
-
-  sorted_arr.concat(left_array).concat(right_array)
-  return sorted_arr
+  sorted_array.concat(left_array[left_idx..]).concat(right_array[right_idx..])
 end
 
 arr = Array[10, 20, 36, 41, -22, 36, 10, -88, 41, 20, 51, 36, 72, 144, 36, 55]
 sorted_arr = merge_sort(arr)
-puts sorted_arr
+puts sorted_arr.inspect
 
